@@ -235,6 +235,68 @@
 
     .book-btn:hover { opacity: 0.88; }
 
+    .member-divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 32px 0 20px;
+      color: var(--text-sub);
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .member-divider::before,
+    .member-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: oklch(30% 0.04 295);
+    }
+
+    .member-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .member-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      padding: 14px 20px;
+      border: 1px solid oklch(30% 0.04 295);
+      border-radius: 6px;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .member-btn:hover {
+      border-color: var(--gold);
+      background: oklch(16% 0.03 295);
+    }
+    .member-btn--premium {
+      border-color: oklch(40% 0.06 295);
+    }
+    .member-btn--premium:hover {
+      border-color: var(--gold);
+    }
+
+    .member-label {
+      font-family: 'Cinzel', serif;
+      font-size: 0.82rem;
+      color: var(--text);
+      letter-spacing: 0.04em;
+    }
+    .member-price {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--gold);
+    }
+    .member-note {
+      font-size: 0.76rem;
+      color: var(--text-sub);
+    }
+
     @media (max-width: 520px) {
       .card { padding: 32px 22px; }
       .row-2 { grid-template-columns: 1fr; }
@@ -326,6 +388,22 @@
       <h2>Details Received</h2>
       <p>Thank you. Dalena has your information and is ready for your session.<br>Click below to choose your date and time.</p>
       <a href="https://calendar.app.google/1MGnax6DEzcqBokH6" target="_blank" rel="noopener" class="book-btn">Choose Your Appointment →</a>
+
+      <div class="member-divider">
+        <span>Interested in a membership?</span>
+      </div>
+      <div class="member-options">
+        <a href="https://square.link/u/SrOGfL4X" target="_blank" rel="noopener" class="member-btn">
+          <span class="member-label">Monthly Membership</span>
+          <span class="member-price">$150 / mo</span>
+          <span class="member-note">4 tarot sessions + ongoing guidance</span>
+        </a>
+        <a href="https://square.link/u/gM6WUXcC" target="_blank" rel="noopener" class="member-btn member-btn--premium">
+          <span class="member-label">Weekly Membership</span>
+          <span class="member-price">$500 / mo</span>
+          <span class="member-note">Weekly sessions + priority access</span>
+        </a>
+      </div>
     </div>
   </div>
 
